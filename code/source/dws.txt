@@ -1,0 +1,19 @@
+1 Requirement สอบถามความต้องการ
+2 Quotation เสนอราคา
+3 Contract ตอบรับ ทำสัญญา
+
+5 Hosting Domain จดโดเมน หรือ เช่าโฮส
+6 Web Design ออกแบบ วาง layout
+7 Logo Design ออกแบบโลโก้
+8 HTML ตัดแบบ html แล้ววางระบบ
+
+9 Development พัฒนาระบบ
+10 Testing ทดสอบกับ demo
+11 Update ปรับปรุงกับ demo
+12 Upload ส่งงาน กับ domain จริง
+
+13Create Google Analitics
+14 Submit Google Webmaster tools
+15 Submit Bing webmaster
+16 Submit yahoo site explorer
+17 Maintenance ดูแลระบบต่อเนื่อง
