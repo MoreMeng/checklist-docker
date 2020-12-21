@@ -1,7 +1,7 @@
 <?php
 
     if ( check_post( $_POST, [ 'mem_user', 'mem_pass' ] ) ) {
-        if ( md5( $_POST['mem_user'] ) == '21232f297a57a5a743894a0e4a801fc3' && md5( $_POST['mem_pass'] ) == '21232f297a57a5a743894a0e4a801fc3' ) {
+        if ( md5( $_POST['mem_user'] ) == 'b338dc25f4ce7cfbbb2b9b0e12ab3382' && md5( $_POST['mem_pass'] ) == 'd79695776a5b40f7cadbee1f91a85c82' ) {
 
             $s                      = '2020-12-17'; //create date salt
             $_SESSION['access_key'] = sha1( $s . $_POST['mem_user'] . $_POST['mem_pass'] );
@@ -47,24 +47,26 @@
     }
 
 ?>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
-      <h1 class="login-title text-center">ลงชื่อเข้าใช้งานระบบ</h1>
-      <div class="account-wall">
-        <form action="" method="post" class="form-signin" name="login" id="login">
-          <div class="col-ms-12 text-center">
-            <!-- <img class="profile-img" src="https://lh3.googleusercontent.com/OcZqAqKdfVXT_g8_6L69_N1c5L-77qjEt_lLoj8lGRFBWIEZYLl47rGlZ-w3zfHH5CEF7Q=w1366-h768-rw-no" width="100" height="100"> -->
-          </div>
+<div class="d-flex vh-100 align-items-center justify-content-center">
+  <!-- <div class="d-inline-flex w-75 align-items-center justify-content-center bg-dark"> -->
+    <div class="col-10 col-sm-6 col-lg-4 col-xl-3 mr-3 card text-light align-items-stretch" id="login-box">
+      <h1 class="login-title mt-3 mx-auto">Sign-In Locker!</h1>
+      <form action="" method="post" class="form-signin mx-auto" name="login" id="login">
+        <div class="text-center"> <i class="far fa-user-circle fa-8x"></i></div>
+
+        <div class="mt-3 mb-3">
           <div id="output"><?php echo $output; ?></div>
-          <input name="mem_user" type="text" class="form-control" placeholder="Username" required autofocus>
-          <input name="mem_pass" type="password" class="form-control" placeholder="Password" required>
-          <button class="btn btn-lg btn-info btn-block" type="submit"><i class="glyphicon glyphicon-log-in"> ลงชื่อเข้าใช้งาน</i>
+          <input name="mem_user" type="text" class="form-control form-control-lg" placeholder="Username" required autofocus>
+          <input name="mem_pass" type="password" class="form-control form-control-lg" placeholder="Password" required>
+        </div>
+        <div class="d-grid gap-2 mx-auto">
+          <button class="btn btn-outline-danger btn-lg" type="submit"><i class="fas fa-fw fa-sign-in-alt"></i> Sign In
           </button>
-        </form>
-        <a class="btn btn-default btn-block" href="https://goo.gl/r9wXQT" target="_blank"><i class="glyphicon glyphicon-book"></i> คู่มือการใช้งาน</a>
-        <span class="clearfix"></span>
-      </div>
-    </div>
+        </div>
+      </form>
+      <!-- <div class="card-footer"> -->
+        <a class="card-footer btn-outline-light text-center" href="https://goo.gl/r9wXQT" target="_blank"><i class="fas fa-fw fa-book"></i> คู่มือการใช้งาน</a>
+      <!-- </div> -->
+    <!-- </div> -->
   </div>
 </div>
