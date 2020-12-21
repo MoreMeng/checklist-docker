@@ -11,9 +11,7 @@
 
         } else {
 
-            $output = '<div class="alert alert-danger alert-dismissible" role="alert">
-        <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-        <i class="fa fa-exclamation-triangle"></i> ชื่อผู้ใช้ หรือ รหัสผ่านผิด</div>';
+            $output = '<div class="alert alert-danger" role="alert"> <i class="fas fa-exclamation-triangle"></i> ชื่อผู้ใช้ หรือ รหัสผ่านผิด</div>';
         }
 
     }
@@ -56,10 +54,10 @@
 
         <div class="mt-3 mb-3">
           <div id="output"><?php echo $output; ?></div>
-          <input name="mem_user" type="text" class="form-control form-control-lg" placeholder="Username" required autofocus>
+          <input name="mem_user" type="text" class="form-control form-control-lg" placeholder="Username" autocomplete="off" required autofocus>
           <input name="mem_pass" type="password" class="form-control form-control-lg" placeholder="Password" required>
         </div>
-        <div class="d-grid gap-2 mx-auto">
+        <div class="d-grid gap-2 mx-auto mb-4">
           <button class="btn btn-outline-danger btn-lg" type="submit"><i class="fas fa-fw fa-sign-in-alt"></i> Sign In
           </button>
         </div>
