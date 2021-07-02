@@ -1,34 +1,29 @@
 <?php
     session_start();
-    error_reporting( E_ALL ^ E_NOTICE );
+    error_reporting( E_ERROR | E_WARNING | E_PARSE );
     mb_internal_encoding( 'UTF-8' );
-    // if ($_COOKIE['survey']) {
-    //     $GET_SURVEY = true;
-    // } else {
-    //     if (empty($_GET['f'])) {
-    //         $GET_SURVEY = false;
-    //     } else {
-    //         $GET_SURVEY = true;
-    //         setcookie("survey", true);
-    //     }
-    // }
-    // setcookie("survey", 0, 0);
-    // print_r( $_SESSION);
+
+    define( 'Q_VERSION', '1.0.1' );
+    define( 'Q_TITLE', 'COVID-19 LAB Locker ' );
 ?>
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta charset="UTF-8">
+<meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="MoreMeng, moremeng@dv4.biz">
 
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="subject" content="">
+  <meta name="robots" content="noindex,noarchive,snippet">
 
-  <title>Locker! Docker</title>
+  <title><?php echo Q_TITLE . Q_VERSION; ?> </title>
 
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/cosmo/bootstrap.min.css" rel="stylesheet" integrity="sha384-OiWEn8WwtH+084y4yW2YhhH6z/qTSecHZuk/eiWtnvLtU+Z8lpDsmhOKkex6YARr" crossorigin="anonymous"> -->
   <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
   <link href='https://fonts.googleapis.com/css?family=Kanit&subset=latin,thai' rel='stylesheet' type='text/css'>
   <style type="text/css">
@@ -108,11 +103,9 @@
     }
 ?>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
-<!-- <script src="bootstrap/js/bootstrap.min.js"></script> -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script> -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
 <script defer src="loadbg.js"></script>
 
 </body>
-
 </html>

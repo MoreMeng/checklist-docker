@@ -1,9 +1,9 @@
 <?php
 
-    if ( check_post( $_POST, [ 'mem_user', 'mem_pass' ] ) ) {
-        if ( md5( $_POST['mem_user'] ) == 'b338dc25f4ce7cfbbb2b9b0e12ab3382' && md5( $_POST['mem_pass'] ) == 'd79695776a5b40f7cadbee1f91a85c82' ) {
+    if ( check_post( $_POST, ['mem_user', 'mem_pass'] ) ) {
+        if ( md5( $_POST['mem_user'] ) == 'b7b1dc541ba98a721295e3d2a9079e7a' && md5( $_POST['mem_pass'] ) == '1bd0588c0ddcf19912172271c78ce7ff' ) {
+            $s = '2021-07-01'; //create date salt
 
-            $s                      = '2020-12-17'; //create date salt
             $_SESSION['access_key'] = sha1( $s . $_POST['mem_user'] . $_POST['mem_pass'] );
 
             $output = '';
@@ -11,7 +11,7 @@
 
         } else {
 
-            $output = '<div class="alert alert-danger" role="alert"> <i class="fas fa-exclamation-triangle"></i> ชื่อผู้ใช้ หรือ รหัสผ่านผิด</div>';
+            $output = '<div class="alert alert-danger fs-3" role="alert"> <i class="fas fa-exclamation-triangle"></i> ชื่อผู้ใช้ หรือ รหัสผ่านผิด</div>';
         }
 
     }
@@ -48,7 +48,7 @@
 <div class="d-flex vh-100 align-items-center justify-content-center">
   <!-- <div class="d-inline-flex w-75 align-items-center justify-content-center bg-dark"> -->
     <div class="col-10 col-sm-6 col-lg-4 col-xl-3 mr-3 card text-light align-items-stretch" id="login-box">
-      <h1 class="login-title mt-3 mx-auto">Sign-In Locker!</h1>
+      <h1 class="login-title mt-3 mx-auto"><?php echo Q_TITLE; ?></h1>
       <form action="" method="post" class="form-signin mx-auto" name="login" id="login">
         <div class="text-center"> <i class="far fa-user-circle fa-8x"></i></div>
 
@@ -58,8 +58,7 @@
           <input name="mem_pass" type="password" class="form-control form-control-lg" placeholder="Password" required>
         </div>
         <div class="d-grid gap-2 mx-auto mb-4">
-          <button class="btn btn-outline-danger btn-lg" type="submit"><i class="fas fa-fw fa-sign-in-alt"></i> Sign In
-          </button>
+          <button class="btn btn-outline-danger btn-lg" type="submit"><i class="fas fa-fw fa-sign-in-alt"></i> Sign In </button>
         </div>
       </form>
       <!-- <div class="card-footer"> -->
